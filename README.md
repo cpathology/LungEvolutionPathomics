@@ -1,5 +1,7 @@
 # LungEvolutionPathomics
 ### Pipeline of investigating lung preneoplasia evolution via pathomics
+* Data to reproduce the results was deposited in [Synapse:syn48334123](https://www.synapse.org/#!Synapse:syn48334123)
+* [NucleiSegHE](https://github.com/cpathology/NucleiSegHE) was used to generate ROI-level nuclei segmentation 
 ![Pipeline of Lung Evolution Pathomics](LungEvolutionPathomics.png)
 
 
