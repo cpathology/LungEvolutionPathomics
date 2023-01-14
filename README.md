@@ -26,3 +26,8 @@ $ docker run -it --rm --user $(id -u):$(id -g) \
   --shm-size=224G --gpus '"device=0,1,2,3"' --cpuset-cpus=0-39 \
   --name lung_evolution_pathomics_chen lung_evolution_pathomics:chen
 ```
+
+## Pathomic Features Evaluating Lung Preneoplasia Evolution
+### 1. Evolution trends along with pathological stage progression
+### 2. Correlation with a series of molecular markers
+### 3. Efficacy in differentiating ADCs from their precursors
