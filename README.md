@@ -30,4 +30,3 @@ $ docker run -it --rm --user $(id -u):$(id -g) \
 ## Pathomic Features Evaluating Lung Preneoplasia Evolution
 ### 1. Evolution trends along with pathological stage progression
 ### 2. Correlation with a series of molecular markers
-### 3. Efficacy in differentiating ADCs from their precursors
