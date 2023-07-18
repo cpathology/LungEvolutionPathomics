@@ -23,7 +23,7 @@ $ docker tag pingjunchen/lung_evolution_pathomics:chen lung_evolution_pathomics:
 $ docker run -it --rm --user $(id -u):$(id -g) \
   -v ${CODE_ROOT}:/App/LungEvolutionPathomics \
   -v ${DATA_ROOT}:/Data \
-  --shm-size=224G --gpus '"device=0,1,2,3"' --cpuset-cpus=0-39 \
+  --shm-size=168G --gpus '"device=0"' --cpuset-cpus=10-39 \
   --name lung_evolution_pathomics_chen lung_evolution_pathomics:chen
 ```
 
