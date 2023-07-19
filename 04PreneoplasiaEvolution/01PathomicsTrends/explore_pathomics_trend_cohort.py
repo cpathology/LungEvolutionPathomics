@@ -25,7 +25,7 @@ if __name__ == "__main__":
     np.random.seed(args.rand_seed)
 
     combine_dir = os.path.join(args.data_root, args.combine_dir)
-    path_trend_dir = os.path.join(combine_dir, args.trend_dir, "Dataset")
+    path_trend_dir = os.path.join(combine_dir, args.trend_dir, "Cohort")
     if not os.path.exists(path_trend_dir):
         os.makedirs(path_trend_dir)
 
