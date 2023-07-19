@@ -37,11 +37,18 @@ if __name__ == "__main__":
         "AEC-Contrast",	"AEC-Energy", "LYM-Contrast", "LYM-Energy"]
     stage_list = ["Normal", "AAH", "AIS", "MIA", "ADC"]    
     for path_fea in pathomics_lst:
-        fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+        fig, axes = plt.subplots(1, 4, figsize=(20, 5))
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, order=stage_list,  orient='v', ax=axes[0])
+        axes[0].spines[['right', 'top']].set_visible(False)
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "Dataset", order=stage_list,  orient='v', ax=axes[1])
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "Race", order=stage_list,  orient='v', ax=axes[2])
+        sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "SmokeStatus", order=stage_list,  orient='v', ax=axes[3])
         # plt.legend(loc = "best")
-        fig.suptitle("{} Trends Across Cohorts and Races".format(path_fea))
+        fig.suptitle("{} Trends Comparison on All Data, Three Cohorts, Two Races, and Smoking Status Across Stages".format(path_fea))
+        for ind in range(1, 4):
+            axes[ind].spines[['left', 'right', 'top']].set_visible(False)
+            axes[ind].get_yaxis().set_visible(False)
+            axes[ind].legend(frameon=False)
+        plt.tight_layout()
         trend_plot_path = os.path.join(path_trend_dir, "{}-Trends{}".format(path_fea, args.plot_format))
         plt.savefig(trend_plot_path, transparent=False, dpi=300)
