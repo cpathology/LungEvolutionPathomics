@@ -7,7 +7,7 @@ import pandas as pd
 
 
 def set_args():
-    parser = argparse.ArgumentParser(description = "Extract lesion cellular ratio  features")
+    parser = argparse.ArgumentParser(description = "Combine Features")
     parser.add_argument("--data_root",        type=str,       default="/Data")
     parser.add_argument("--slide_roi_dir",    type=str,       default="SlidesROIs")
     parser.add_argument("--combine_dir",      type=str,       default="CombineAnalysis")
