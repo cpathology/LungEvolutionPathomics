@@ -36,7 +36,7 @@ if __name__ == "__main__":
     path_genom_fea_path = os.path.join(pathgenom_dir, "LesionPathoGenomics.xlsx")
     path_genom_df = pd.read_excel(path_genom_fea_path)
 
-    pathomic_markers = ["AEC-Ratio", "LYM-Ratio", "AEC-Density", "LYM-Density", "Altieri3-Entropy", 
+    pathomic_markers = ["AEC-Proportion", "LYM-Proportion", "AEC-Density", "LYM-Density", "Altieri3-Entropy", 
         "AEC-Contrast", "AEC-Energy", "LYM-Contrast", "LYM-Energy"]
     genomic_markers = ["TMB.nonsynonymous.log2", "AI.burden", "CNV.burden(gain+loss)", "T.cell.fraction", 
         "P1.Total.T.cells", "P1.Cytotoxic.T.cells", "P1.Total.Macrophages", 
