@@ -32,7 +32,7 @@ if __name__ == "__main__":
     fuse_fea_path = os.path.join(combine_dir, "CombineROIFeatures.csv")
     fuse_fea_df = pd.read_csv(fuse_fea_path)
 
-    ratio_feas = ["AEC-Ratio", "LYM-Ratio",]
+    ratio_feas = ["AEC-Proportion", "LYM-Proportion",]
     density_feas = ["AEC-Density", "LYM-Density",]
     spatial_feas = ["Altieri3-Entropy", ]
     embed_feas =  ["AEC-Contrast",	"AEC-Energy", "LYM-Contrast", "LYM-Energy"]

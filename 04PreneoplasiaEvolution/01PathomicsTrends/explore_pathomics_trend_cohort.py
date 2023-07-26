@@ -33,7 +33,7 @@ if __name__ == "__main__":
     fuse_fea_df = pd.read_csv(fuse_fea_path)
    
     # compare two cohort features
-    pathomics_lst = ["AEC-Ratio", "LYM-Ratio", "AEC-Density", "LYM-Density", "Altieri2-Entropy", "Altieri3-Entropy",
+    pathomics_lst = ["AEC-Proportion", "LYM-Proportion", "AEC-Density", "LYM-Density", "Altieri2-Entropy", "Altieri3-Entropy",
         "AEC-Contrast",	"AEC-Energy", "LYM-Contrast", "LYM-Energy"]
     stage_list = ["Normal", "AAH", "AIS", "MIA", "ADC"]    
     for path_fea in pathomics_lst:
