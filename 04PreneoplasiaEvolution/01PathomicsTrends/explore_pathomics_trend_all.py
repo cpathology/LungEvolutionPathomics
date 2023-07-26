@@ -44,7 +44,7 @@ if __name__ == "__main__":
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "Race", order=stage_list,  orient='v', ax=axes[2])
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "SmokeStatus", order=stage_list,  orient='v', ax=axes[3])
         # plt.legend(loc = "best")
-        fig.suptitle("{} Trends Comparison on All Data, Three Cohorts, Two Races, and Smoking Status Across Stages".format(path_fea))
+        fig.suptitle("{} Trends on All Data, Comparison of Three Cohorts, Two Races, and Smoking Status Across Stages".format(path_fea))
         for ind in range(1, 4):
             axes[ind].spines[['left', 'right', 'top']].set_visible(False)
             axes[ind].get_yaxis().set_visible(False)
