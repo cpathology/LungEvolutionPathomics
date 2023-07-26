@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     # organize ROI features
     for ind, ele in enumerate(roi_list):
-        print("Extract entroies on {}/{}".format(ind+1, len(roi_list)))
+        print("Extract features on {}/{}".format(ind+1, len(roi_list)))
         # add meta information
         ROIs.append(ele)
         Stages.append(lesion_stage_dict[ele])
@@ -113,7 +113,7 @@ if __name__ == "__main__":
  
     # save features
     fea_list = list(zip(ROIs, Stages, aec_rs, lym_rs, oc_rs, aec_ds, lym_ds, oc_ds, altieri2_entropies, altieri3_entropies))
-    fea_names = ["Lesions", "Stages", "AEC-Ratio", "LYM-Ratio", "OC-Ratio", "AEC-Density", "LYM-Density", "OC-Density", "Altieri2-Entropy", "Altieri3-Entropy"]
+    fea_names = ["Lesions", "Stages", "AEC-Porportion", "AEC-Porportion", "OC-Ratio", "AEC-Density", "LYM-Density", "OC-Density", "Altieri2-Entropy", "Altieri3-Entropy"]
     roi_fea_df = pd.DataFrame(fea_list, columns = fea_names)
     roi_fea_path = os.path.join(roi_data_root, "{}LesionFeatures.csv".format(args.dataset))
     roi_fea_df.to_csv(roi_fea_path, index=False)
