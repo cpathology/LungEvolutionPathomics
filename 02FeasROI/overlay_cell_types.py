@@ -19,7 +19,7 @@ def set_args():
     parser.add_argument("--block_dir",        type=str,       default="RegionROIs")
     parser.add_argument("--roi_seg_dir",      type=str,       default="RegionSegs")
     parser.add_argument("--cell_fea_dir",     type=str,       default="CellFeas")
-    parser.add_argument("--cell_overlay_dir", type=str,       default="OverlayCells") 
+    parser.add_argument("--cell_overlay_dir", type=str,       default="OverlayCellType") 
     parser.add_argument("--dataset",          type=str,       default="Japan", choices=["Japan", "USA", "China"])
     parser.add_argument("--rand_seed",        type=int,       default=1234)    
 
