@@ -35,7 +35,8 @@ if __name__ == "__main__":
     # compare two cohort features
     pathomics_lst = ["AEC-Proportion", "LYM-Proportion", "AEC-Density", "LYM-Density", "Altieri2-Entropy", "Altieri3-Entropy",
         "AEC-Contrast",	"AEC-Energy", "LYM-Contrast", "LYM-Energy"]
-    stage_list = ["Normal", "AAH", "AIS", "MIA", "ADC"]    
+    stage_list = ["Normal", "AAH", "AIS", "MIA", "ADC"]
+    sns.set(font_scale=1.5)    
     for path_fea in pathomics_lst:
         fig, axes = plt.subplots(1, 4, figsize=(20, 5))
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, order=stage_list,  orient='v', ax=axes[0])
@@ -44,7 +45,8 @@ if __name__ == "__main__":
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "Race", order=stage_list,  orient='v', ax=axes[2])
         sns.violinplot(data=fuse_fea_df, x = "Stages", y=path_fea, hue = "SmokeStatus", order=stage_list,  orient='v', ax=axes[3])
         # plt.legend(loc = "best")
-        fig.suptitle("{} Trends on All Data, Comparison of Three Cohorts, Two Races, and Smoking Status Across Stages".format(path_fea))
+        # fig.suptitle("{} Trends on All Data, Comparison of Three Cohorts, Two Races, and Smoking Status Across Stages".format(path_fea))
+        fig.suptitle("{}".format(path_fea), fontsize=20)        
         for ind in range(1, 4):
             axes[ind].spines[['left', 'right', 'top']].set_visible(False)
             axes[ind].get_yaxis().set_visible(False)
