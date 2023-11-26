@@ -92,11 +92,12 @@ if __name__ == "__main__":
     # plot the confusion matrix
     fig, axes = plt.subplots(1, 2, figsize=(15, 6))
     categories = ["AEC", "LYM", "OC"]
-    sns.heatmap(nyu_conf_mat, annot=True, fmt="d", cmap="Blues", xticklabels=categories, yticklabels=categories, ax=axes[0])
-    axes[0].set_title("Japan model on USA cells - Acc:{:.3f}".format(nyu_acc))
-    sns.heatmap(japan_conf_mat, annot=True, fmt="d", cmap="Blues", xticklabels=categories,yticklabels=categories, ax=axes[1])
-    axes[1].set_title("USA model on Japan cells - Acc:{:.3f}".format(japan_acc))
-    fig.suptitle("Cell Classifier Cross-Cohort Evaluation")
+    sns.set(font_scale=1.8)
+    sns.heatmap(nyu_conf_mat, annot=True, annot_kws={"size": 20}, fmt="d", cmap="Blues", xticklabels=categories, yticklabels=categories, ax=axes[0])
+    axes[0].set_title("Japan model on USA cells - Acc:{:.3f}".format(nyu_acc), fontsize=16)
+    sns.heatmap(japan_conf_mat, annot=True, annot_kws={"size": 20}, fmt="d", cmap="Blues", xticklabels=categories,yticklabels=categories, ax=axes[1])
+    axes[1].set_title("USA model on Japan cells - Acc:{:.3f}".format(japan_acc), fontsize=16)
+    # fig.suptitle("Cell Classifier Cross-Cohort Evaluation")
 
     conf_mat_path = os.path.join(vis_dir, "cross_eval_conf_mat" + args.plot_format)
-    plt.savefig(conf_mat_path, transparent=False, dpi=300) 
+    plt.savefig(conf_mat_path, transparent=True, dpi=300) 

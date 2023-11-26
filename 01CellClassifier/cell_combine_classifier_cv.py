@@ -73,10 +73,10 @@ if __name__ == "__main__":
     # plot the confusion matrix
     fig, axes = plt.subplots(1, 1, figsize=(8, 6))
     categories = ["AEC", "LYM", "OC"]
-    sns.heatmap(cv_conf_mat, annot=True, fmt="d", cmap="Blues", xticklabels=categories, yticklabels=categories)
-
-    fig.supxlabel("Predictions")     
-    fig.supylabel("Ground Truth")    
-    fig.suptitle("Accuracy: {:.3f} Standard Deviation: {:.3f}".format(scores.mean(), scores.std()))
+    sns.set(font_scale=1.8)
+    sns.heatmap(cv_conf_mat, annot=True, annot_kws={"size": 20}, fmt="d", cmap="Blues", xticklabels=categories, yticklabels=categories)
+    # fig.supxlabel("Predictions")     
+    # fig.supylabel("Ground Truth")    
+    fig.suptitle("Accuracy: {:.3f} Standard Deviation: {:.3f}".format(scores.mean(), scores.std()), fontsize=16)
     cv_conf_mat_path = os.path.join(vis_dir, "fusing_cv_conf_mat" + args.plot_format)
-    plt.savefig(cv_conf_mat_path, transparent=False, dpi=300)   
+    plt.savefig(cv_conf_mat_path, transparent=True, dpi=300)   
